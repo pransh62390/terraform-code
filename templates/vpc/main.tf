@@ -1,5 +1,5 @@
 module "vpc" {
-  source = "../../../..//modules/vpc/vpc_new"
+  source = "../..//modules/vpc/vpc_new"
   vpc_cidr = var.VPC_CIDR
   vpc_enable_dns_support = var.VPC_ENABLE_DNS_SUPPORT
   vpc_enable_dns_hostnames = var.VPC_ENABLE_DNS_HOSTNAMES

@@ -1,5 +1,5 @@
 module "lambda_layers" {
-  source = "../../../..//modules/lambda/lambda_layers"
+  source = "../..//modules/lambda/lambda_layers"
   for_each = var.LAMBDA_LAYERS_LIST
   lambda_layer_name = "${var.SHORT_ENV}-${each.key}"
   lambda_layer_compatible_runtimes = each.value.LAMBDA_LAYER_COMPATIBLE_RUNTIMES

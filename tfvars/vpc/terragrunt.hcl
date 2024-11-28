@@ -1,5 +1,5 @@
 terraform {
-  source = "../../../../../..//tftemplates/stage/common/vpc/"
+  source = "../..//tftemplates/vpc/"
   extra_arguments "common_vars" {
     commands = ["init","plan", "apply"]
   }

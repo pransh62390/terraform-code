@@ -1,5 +1,5 @@
 module "lambda_function" {
-  source                                                = "../../../..//modules/lambda/lambda_new"
+  source                                                = "../..//modules/lambda/lambda_new"
   for_each                                              = var.LAMBDA_FUNCTION_LIST
   lambda_name                                           = "${var.SHORT_ENV}-${each.key}"
   lambda_assume_role_policy                             = each.value.LAMBDA_FUNCTION_ASSUME_ROLE_POLICY

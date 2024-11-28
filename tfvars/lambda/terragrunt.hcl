@@ -1,5 +1,5 @@
 terraform {
-  source = "../../../../../../..//tftemplates/stage/data/ec2_infra"
+  source = "../..//tftemplates/lambda"
   extra_arguments "common_vars" {
     commands = ["init","plan", "apply"]
   }
@@ -52,16 +52,6 @@ inputs = {
       }
       LAMBDA_LAYERS_ARNS = ["arn:aws:lambda:ap-south-1::layer:stg-layer:1"]
       # LAMBDA_LAYERS_ARNS = [dependency.lambda_layer_arn_list.outputs.LAMBDA_LAYER_ARN[0]]
-    }
-  }
-
-  KINESIS_STREAM_LIST = {
-    dynamo-ut-stream = {
-      KINESIS_STREAM_MODE_DETAILS = {
-        KINESIS_STREAM_MODE = "PROVISIONED"
-      }
-      KINESIS_STREAM_SHARD_COUNT = 2
-      KINESIS_STREAM_RETENTION_PERIOD = 24
     }
   }
 }
