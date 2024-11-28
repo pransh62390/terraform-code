@@ -65,7 +65,7 @@ generate "backend" {
 terraform {
   backend "s3" {
     bucket         = "staging-setup-cloud-platform"
-    key            = "stage.terraform.tfstate/ap-south-1/common/vpc/terraform.tfstate"
+    key            = "stage.terraform.tfstate/vpc/terraform.tfstate"
     region         = "ap-south-1"
   }
 }
